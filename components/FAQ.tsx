@@ -97,7 +97,7 @@ export default function FAQ() {
           {displayed.map((faq, i) => {
             const isOpen = openIdx === i;
             return (
-              <div key={i} className={`faq-item reveal${isOpen ? ' open' : ''}`}>
+              <div key={i} className={`faq-item${isOpen ? ' open' : ''}`}>
                 <button
                   className="faq-q"
                   aria-expanded={isOpen}
