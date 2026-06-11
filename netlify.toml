@@ -1,0 +1,5 @@
+# Cloudflare Pages build configuration
+# Set these in the Cloudflare Pages dashboard:
+#   Build command:    npm run build
+#   Build output dir: out
+#   Node version:     18 (set NODE_VERSION env var to 18)
