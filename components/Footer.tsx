@@ -37,7 +37,7 @@ export default function Footer() {
                 <path d="M14 3c.4 2.6 2 4.2 4.6 4.5v3c-1.7 0-3.3-.5-4.6-1.4v6.1A5.6 5.6 0 1 1 8.4 9.6v3.1a2.6 2.6 0 1 0 2.6 2.6V3H14z" />
               </svg>
             </a>
-            <a href="https://x.com/GoLoad91" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <a href="https://x.com/GoLoad95927" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 4l16 16M4 20L20 4" />
               </svg>
