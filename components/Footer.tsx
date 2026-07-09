@@ -86,6 +86,8 @@ export default function Footer() {
         <span>© {new Date().getFullYear()} Load N-GO · 4621 Rosemead Blvd, Pico Rivera, CA 90660</span>
         <span>
           <a href="/privacy" className="footer__legal-link">Privacy Notice</a>
+          &nbsp;·&nbsp;
+          <a href="/backlinks" className="footer__legal-link">Backlinks</a>
           &nbsp;·&nbsp;@load_n_go_ · load-n-go.biz
         </span>
       </div>
