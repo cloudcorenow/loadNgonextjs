@@ -3,10 +3,33 @@ import './styles/styles.css';
 import './styles/site.css';
 import type { Metadata } from 'next';
 
+const SITE_URL = 'https://load-n-go.biz';
+const TITLE = 'Load N-GO Laundry | Modern Laundry Made Simple';
+const DESCRIPTION =
+  'Modern, self-service laundromat with high-capacity washers and dryers from Load N-GO Laundry.';
+const OG_IMAGE = '/loadngo-social-preview.png';
+
 export const metadata: Metadata = {
-  title: 'Load N-GO Laundry | Modern Laundry Made Simple',
-  description:
-    'Hassle-free laundry with flexible payment. Tap our reloadable card or drop in coins — wash, dry, and fold in a clean, modern facility. Open 6AM–10PM daily at 4621 Rosemead Blvd, Pico Rivera, CA.',
+  title: TITLE,
+  description: DESCRIPTION,
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: SITE_URL,
+    siteName: 'Load N-GO Laundry',
+    images: [{ url: OG_IMAGE }],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
