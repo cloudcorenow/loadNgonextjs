@@ -1,49 +1,51 @@
+const serviceCards = [
+  {
+    title: 'SELF-SERVICE LAUNDRY',
+    image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=85',
+    description: 'Wash at your own pace with our modern, high-capacity machines. Enjoy a clean space, large folding areas, and free Wi-Fi while you do your laundry.',
+  },
+  {
+    title: 'WASH & FOLD',
+    image: 'https://images.unsplash.com/photo-1610557892470-a9f7d2a8c2a4?auto=format&fit=crop&w=900&q=85',
+    description: 'Let our team handle your laundry from start to finish. Drop off your clothes and pick them up professionally washed, dried, and neatly folded.',
+  },
+  {
+    title: 'COMMERCIAL LAUNDRY',
+    image: 'https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?auto=format&fit=crop&w=900&q=85',
+    description: 'Reliable laundry services for local businesses. We keep your towels, tablecloths, sheets, and uniforms clean and ready for everyday use, so your business runs smoothly.',
+  },
+  {
+    title: 'WASH, DRY AND GO',
+    image: 'https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&w=900&q=85',
+    description: 'Short on time? Drop off your laundry and we’ll take care of the rest. We wash, dry, and notify you when your order is ready for quick and easy pickup.',
+  },
+];
+
 export default function WhyChooseUs() {
   return (
-    <section className="section section--soft" id="about">
+    <section className="section section--services" id="about">
       <div className="wrap">
         <div className="section-head reveal">
-          <span className="eyebrow">Why Load N-GO</span>
-          <h2 className="h2">Why Choose Load N-GO?</h2>
-          <p className="lead">We&apos;ve reimagined the laundromat with modern technology and customer-first service.</p>
+          <span className="eyebrow">Laundry Made Simple</span>
+          <h2 className="h2">Find the service that fits your day.</h2>
+          <p className="lead">From a quick self-service wash to full-service care, Load N-GO makes laundry feel effortless.</p>
         </div>
-        <div className="why-grid">
-          <article className="why-card reveal">
-            <span className="ibadge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6l7-3z" />
-              </svg>
-            </span>
-            <h3 className="h3">Secure &amp; Reliable</h3>
-            <p className="muted">Your reloadable card is protected and easily replaced if lost. Treat it like cash.</p>
-          </article>
-          <article className="why-card reveal">
-            <span className="ibadge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3.5 2" />
-              </svg>
-            </span>
-            <h3 className="h3">Convenient Hours</h3>
-            <p className="muted">Open 6 AM to 10 PM daily. Do your laundry on your schedule, every day of the week.</p>
-          </article>
-          <article className="why-card reveal">
-            <span className="ibadge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" />
-              </svg>
-            </span>
-            <h3 className="h3">Fast &amp; Efficient</h3>
-            <p className="muted">Modern high-speed washers and dryers that save you time and get your clothes spotless.</p>
-          </article>
-          <article className="why-card reveal">
-            <span className="ibadge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 18V6l11-2v12" /><circle cx="6" cy="18" r="3" /><circle cx="17" cy="16" r="3" />
-              </svg>
-            </span>
-            <h3 className="h3">Relaxing Atmosphere</h3>
-            <p className="muted">Enjoy music while you wait in our clean, well-maintained facility with comfortable seating.</p>
-          </article>
+        <div className="service-choice-grid">
+          {serviceCards.map((service) => (
+            <article className="service-choice-card reveal" key={service.title}>
+              <div className="service-choice-card__image-wrap">
+                <img src={service.image} alt={service.title.toLowerCase()} className="service-choice-card__image" loading="lazy" />
+              </div>
+              <div className="service-choice-card__content">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <a href="#services" className="service-choice-card__link">
+                  Learn more
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
